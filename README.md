@@ -35,6 +35,25 @@
     - `npm run seed`
 8. Run the server
     - `npm run start`
+## Routes examples
+### Auth
+- Register: POST `localhost:3000/api/auth/signup`
+- Login: POST `localhost:3000/api/auth/login`
+- Get User: GET `localhost:3000/api/auth/user`
+- Update User: PATCH `localhost:3000/api/auth/user`
+### Contacts
+- Get All: GET `localhost:3000/api/contacts`
+- Find One: GET `localhost:3000/api/contacts/:id`
+- Create: POST `localhost:3000/api/contacts`
+- Update Contact: PATCH `localhost:3000/api/contacts/:id`
+- Search by phone, email, name: GET `localhost:3000/api/contacts/search/:value`
+- Delete Contact: DELETE `localhost:3000/api/contacts/:id`
+### Groups
+- Get All: GET `localhost:3000/api/groups`
+- Find One: GET `localhost:3000/api/groups/:id`
+- Create: POST `localhost:3000/api/groups`
+- Update Group: PATCH `localhost:3000/api/groups/:id`
+- Delete Group: DELETE `localhost:3000/api/groups/:id`
 
 ## Homework
 1. Search for the "TODO" comments 
