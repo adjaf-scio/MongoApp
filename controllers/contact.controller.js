@@ -103,3 +103,9 @@ exports.deleteContact = async function (req, res) {
 
     return res.status(204);
 }
+
+exports.contactsWithoutGroup = async function(req, res) {
+    // TODO emiko: Obtener contactos que no tengan grupos
+
+    return res.json({ contacts });
+}
