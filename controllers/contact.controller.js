@@ -103,3 +103,9 @@ exports.deleteContact = async function (req, res) {
 
     return res.status(204);
 }
+
+exports.getContactsWithoutNumber = async function(req, res) {
+    // TODO Karol: Obtener contactos que tengan campo phone vacio
+
+    return res.json({ contacts });
+}
