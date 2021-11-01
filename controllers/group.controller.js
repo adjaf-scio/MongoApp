@@ -39,6 +39,10 @@ exports.deleteGroup = async function(req, res) {
     return res.status(204);
 }
 
+exports.searchByName = async function(req, res) {
+    // TODO Karina: Implementar busqueda de grupos por nombre
 
+    return res.json({ groups });
+}
 
 
