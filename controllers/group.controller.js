@@ -24,7 +24,6 @@ exports.createGroup = async function(req, res) {
 
 exports.updateGroup = async function(req, res) {
     const { id } = req.params;
-
     const { body } = req;
 
     // TODO: Actualizar datos de un grupo (name, color, icon)

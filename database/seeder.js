@@ -11,6 +11,7 @@ const seedDatabase = async () => {
     const User = mongoose.model('User');
     const Group = mongoose.model('Group');
 
+    console.log('\n*******Creating user********')
     const user = await User.create({
         firstName: 'Apprentice',
         lastName: 'Pro',
@@ -18,6 +19,7 @@ const seedDatabase = async () => {
         password: '12345678'
     });
 
+    console.log('\n*******Creating contacts********')
     for (let index = 0; index < 10; index++) {
         await Contact.create({
             name: faker.name.findName(),
@@ -33,16 +35,24 @@ const seedDatabase = async () => {
         });
     }
 
+    console.log('\n*******Creating groups********')
     for (let index = 0; index < 3; index++) {
-        await  Group.create({
+        await Group.create({
             name: faker.lorem.word(6),
             color: faker.commerce.color()
         })
     }
 
-    console.log('SEED COMPLETE');
+    console.log('\n*******Assigning one group to one contact********')
+    const group = await Group.findOne();
+    const contact = await Contact.findOne();
+    
+    contact.groups.push(group._id);
+    await contact.save();
 
-    console.log('Your user info is: ' + JSON.stringify(user.userWithToken()));
+    console.log('\nSEED COMPLETE');
+
+    console.log('Your user info is: \n' + JSON.stringify(user.userWithToken()));
 
     process.exit();
 }

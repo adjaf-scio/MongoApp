@@ -63,6 +63,7 @@ exports.findOne = async function (req, res) {
 
 exports.updateContact = async function(req, res) {
     const id = req.params.id;
+    const { body } = req;
     
     // TODO: Implementar update de un contacto (sin actualizar grupos)
 
@@ -89,7 +90,7 @@ exports.searchContact = async function (req, res) {
         ]
     };
 
-    const contacts = await Contact.find(query);
+    const contacts = await Contact.find(query).populate('groups');
 
     return res.json({contacts})
 }
