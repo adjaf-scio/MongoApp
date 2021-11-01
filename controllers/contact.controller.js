@@ -103,3 +103,12 @@ exports.deleteContact = async function (req, res) {
 
     return res.status(204);
 }
+
+exports.searchByGroup = async function(req, res) {
+    const { id } = req.params;
+
+    // TODO Isabel: 
+    // Obtener todos los contactos que estén en el grupo que se manda como id
+
+    return res.json({ contacts });
+}

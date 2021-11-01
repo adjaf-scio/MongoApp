@@ -11,6 +11,7 @@ router.patch('/:id', auth.loginRequired, controller.updateContact);
 router.get('/:id', auth.loginRequired, controller.findOne);
 router.delete('/:id', auth.loginRequired, controller.deleteContact);
 router.get('/search/:value', auth.loginRequired, controller.searchContact);
+router.get('/searchbygroup/:id', auth.loginRequired, controller.searchByGroup);
 
 
 module.exports = router;
