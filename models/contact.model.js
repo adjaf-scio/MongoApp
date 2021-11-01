@@ -41,4 +41,7 @@ ContactSchema.virtual('fullAddress').get(function () {
     return this.address.street + ' #' + this.address.number + '\n' + this.district + '\nZip Code ' + this.address.zipCode; 
 });
 
+// TODO edgar: 
+// Implementar campo nickname, cadena, no requerido, se genera al guardarlo (metodo "pre"), toma las primeras 4 letras del nombre
+
 mongoose.model('Contact', ContactSchema);
