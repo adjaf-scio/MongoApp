@@ -9,8 +9,9 @@
     - String connection: `mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&ssl=false`
 3. Create a database called **apprenticeship** with a collection called **users**
 4. Download repo and enter the folder
-`git clone https://github.com/adjaf-scio/MongoApp.git`
-`cd MongoApp`
+    - `git clone https://github.com/adjaf-scio/MongoApp.git`
+    - `cd MongoApp`
+
 5. Checkout your branch based on your name
     - karina
     - isabel
@@ -23,14 +24,17 @@
     - osvaldo
     - antonio
     - caliche
+
 `git checkout name`
+
 `git pull`
-6. Download npm modules
-`npm install`
-7. Run Seeder (just once), you will see your random email and token in the output (password is 12345678)
-`npm run seed`
+
+6. Download npm modules 
+   - `npm install`
+7. Run Seeder (just once), you will see your random email and token in the output (password is *12345678*) 
+    - `npm run seed`
 8. Run the server
-`npm run start`
+    - `npm run start`
 
 ## Homework
 1. Search for the "TODO" comments 
