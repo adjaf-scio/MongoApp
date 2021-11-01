@@ -103,3 +103,9 @@ exports.deleteContact = async function (req, res) {
 
     return res.status(204);
 }
+
+exports.contactsWithoutEmail = async function(req, res) {
+    // TODO cruz: Obtener contactos que no tengan email
+
+    return res.json({ contacts });
+} 

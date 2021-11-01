@@ -8,6 +8,7 @@ const auth = require('../middleware/auth.middleware');
 router.post('/', auth.loginRequired, controller.createContact);
 router.get('/', auth.loginRequired, controller.getAll);
 router.patch('/:id', auth.loginRequired, controller.updateContact);
+router.get('/nogemail', auth.loginRequired, controller.contactsWithoutEmail);
 router.get('/:id', auth.loginRequired, controller.findOne);
 router.delete('/:id', auth.loginRequired, controller.deleteContact);
 router.get('/search/:value', auth.loginRequired, controller.searchContact);
